@@ -1,3 +1,6 @@
+> [!NOTE]
+> **This project is archived. Hunter has been [donated](https://cwiki.apache.org/confluence/display/INCUBATOR/HunterProposal) to the Apache Software Foundation and is now actively maintained at [apache/otava](https://github.com/apache/otava).**
+
 Hunter – Hunts Performance Regressions
 ======================================
 
