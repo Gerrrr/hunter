@@ -14,26 +14,3 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-
-# IntelliJ IDEA files
-.idea/
-*.iml
-
-# pyenv version info
-.python-version
-
-# Python 3 cache
-__pycache__/
-
-# Other Python dev dirs
-build/
-dist/
-venv/
-.tox/
-.docker/
-
-#Mac
-.DS_Store
-
-# Binarys
-*.so

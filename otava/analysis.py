@@ -20,11 +20,14 @@ from typing import Iterable, List, Reversible
 
 import numpy as np
 from scipy.stats import ttest_ind_from_stats
-from signal_processing_algorithms.e_divisive import EDivisive
-from signal_processing_algorithms.e_divisive.base import SignificanceTester
-from signal_processing_algorithms.e_divisive.calculators import cext_calculator
-from signal_processing_algorithms.e_divisive.change_points import EDivisiveChangePoint
-from signal_processing_algorithms.e_divisive.significance_test import (
+
+from otava.signal_processing_algorithms.e_divisive import EDivisive
+from otava.signal_processing_algorithms.e_divisive.base import SignificanceTester
+from otava.signal_processing_algorithms.e_divisive.calculators import cext_calculator
+from otava.signal_processing_algorithms.e_divisive.change_points import (
+    EDivisiveChangePoint,
+)
+from otava.signal_processing_algorithms.e_divisive.significance_test import (
     QHatPermutationsSignificanceTester,
 )
 

@@ -15,25 +15,35 @@
 # specific language governing permissions and limitations
 # under the License.
 
-# IntelliJ IDEA files
-.idea/
-*.iml
+import os
 
-# pyenv version info
-.python-version
+from setuptools import Extension, setup
 
-# Python 3 cache
-__pycache__/
 
-# Other Python dev dirs
-build/
-dist/
-venv/
-.tox/
-.docker/
+def get_extensions():
+    """Get list of C extensions to build"""
+    extensions = []
 
-#Mac
-.DS_Store
+    # E-divisive C extension
+    c_file = "otava/signal_processing_algorithms/e_divisive/calculators/e_divisive.c"
 
-# Binarys
-*.so
+    if os.path.exists(c_file):
+        extensions.append(
+            Extension(
+                "otava.signal_processing_algorithms.e_divisive.calculators._e_divisive",
+                sources=[c_file],
+                include_dirs=[],
+                libraries=[],
+                library_dirs=[],
+                define_macros=[],
+            )
+        )
+    else:
+        print(f"Warning: {c_file} not found, skipping C extension")
+
+    return extensions
+
+
+setup(
+    ext_modules=get_extensions(),
+)

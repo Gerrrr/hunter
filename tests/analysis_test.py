@@ -16,9 +16,11 @@
 # under the License.
 
 import numpy as np
-from signal_processing_algorithms.e_divisive.change_points import EDivisiveChangePoint
 
 from otava.analysis import TTestSignificanceTester, compute_change_points, fill_missing
+from otava.signal_processing_algorithms.e_divisive.change_points import (
+    EDivisiveChangePoint,
+)
 
 
 def test_fill_missing():
